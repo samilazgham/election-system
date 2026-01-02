@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام التصويت الديمقراطي</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 30px; }
+        .card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .form-group { margin-bottom: 20px; }
+        input, select { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; margin-top: 5px; }
+        button { background: #27ae60; color: white; border: none; padding: 15px 30px; border-radius: 8px; width: 100%; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗳️ نظام التصويت الديمقراطي</h1>
+            <p>مشاركتك تهمنا، صوت بمسؤولية</p>
+        </div>
+        
+        <div class="card">
+            <h2>التصويت الإلكتروني</h2>
+            <form action="/vote" method="POST">
+                <div class="form-group">
+                    <label>رقم بطاقة الهوية</label>
+                    <input type="text" name="id_number" required placeholder="أدخل رقم الهوية">
+                </div>
+                
+                <div class="form-group">
+                    <label>اختر المرشح</label>
+                    <select name="candidate_id" required>
+                        <option value="">-- اختر مرشح --</option>
+                        <option value="1">أحمد محمد</option>
+                        <option value="2">سارة خالد</option>
+                        <option value="3">علي حسن</option>
+                    </select>
+                </div>
+                
+                <button type="submit">إرسال التصويت</button>
+            </form>
+            <p style="margin-top: 15px; color: #666; text-align: center;">يمكنك التصويت مرة واحدة فقط</p>
+        </div>
+        
+        <p style="text-align: center; color: white; margin-top: 20px;">
+            <a href="/admin" style="color: #ffd700; text-decoration: none;">دخول الإدارة</a>
+        </p>
+    </div>
+</body>
+</html>
